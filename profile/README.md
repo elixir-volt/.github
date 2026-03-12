@@ -1,4 +1,4 @@
-# Volt ⚡
+# Elixir Volt ⚡
 
 Elixir-native frontend toolchain. No Node.js, no npm, no esbuild — just Rust NIFs on the BEAM.
 
