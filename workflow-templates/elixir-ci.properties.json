@@ -1,0 +1,7 @@
+{
+  "name": "Elixir CI",
+  "description": "Run Elixir CI on the latest supported Elixir/OTP pair and the minimum supported pair.",
+  "iconName": "octicon beaker",
+  "categories": ["Elixir"],
+  "filePatterns": ["^mix\\.exs$"]
+}
