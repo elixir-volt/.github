@@ -2,6 +2,13 @@
 
 Frontend tooling for Phoenix that runs inside the BEAM. Build JavaScript, TypeScript, Vue, Tailwind CSS, npm packages, and Iconify SVGs from Elixir — without managing Node.js toolchain processes in your app.
 
+These packages are the frontend half of a larger thesis — a web stack
+where the toolchain, the runtime, and the app share one observable
+machine: builds rebuild in milliseconds, browser console errors land in
+your server logs, and JavaScript runs as supervised processes. The full
+picture lives in
+**[Building Blocks for the Future Web](https://github.com/elixir-vibe/building-blocks)**.
+
 ```bash
 mix igniter.install volt
 mix phx.server
@@ -54,3 +61,9 @@ Phoenix app
 ## Why this exists
 
 Phoenix apps should not need a pile of external watchers, binaries, and JavaScript toolchain glue to get modern frontend ergonomics. Elixir Volt packages keep the toolchain close to the app, supervised by the BEAM, configurable with Elixir, and easy to compose with Phoenix.
+
+The deeper argument — why the toolchain belongs inside the VM, how this
+composes with [Elixir Vibe](https://github.com/elixir-vibe)'s analysis
+stack and [OpenPencil](https://github.com/open-pencil), and where it's
+going — is written up as a living standard:
+[Building Blocks for the Future Web](https://github.com/elixir-vibe/building-blocks).
