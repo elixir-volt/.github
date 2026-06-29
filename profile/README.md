@@ -1,6 +1,6 @@
 # Elixir Volt ⚡
 
-Frontend tooling for Phoenix that runs inside the BEAM. Build JavaScript, TypeScript, Vue, Tailwind CSS, npm packages, and Iconify SVGs from Elixir — without managing Node.js toolchain processes in your app.
+Frontend and site tooling for Elixir and Phoenix that runs inside the BEAM. Build JavaScript, TypeScript, Vue, Tailwind CSS, npm packages, Iconify SVGs, and content sites from Elixir — without managing Node.js toolchain processes in your app.
 
 These packages are the frontend half of a larger thesis — a web stack
 where the toolchain, the runtime, and the app share one observable
@@ -21,6 +21,12 @@ Volt is the center of the stack: a Vite-level asset pipeline with dev server, HM
 | Project | What it does | Hex |
 | --- | --- | --- |
 | [volt](https://github.com/elixir-volt/volt) | Elixir-native frontend build tool: dev server, HMR, Tailwind CSS, JS/TS, Vue/Svelte/React/Solid, production builds | [![Hex](https://img.shields.io/hexpm/v/volt.svg)](https://hex.pm/packages/volt) |
+
+## Sites and publishing
+
+| Project | What it does | Hex |
+| --- | --- | --- |
+| [astral](https://github.com/elixir-volt/astral) | Volt-powered site generator for Elixir: Markdown, `.astral` HEEx templates, content collections, routes, images, feeds, sitemaps, and islands | [![Hex](https://img.shields.io/hexpm/v/astral.svg)](https://hex.pm/packages/astral) |
 
 ## Phoenix UI packages
 
@@ -44,7 +50,8 @@ Volt is the center of the stack: a Vite-level asset pipeline with dev server, HM
 ## How it fits together
 
 ```text
-Phoenix app
+Elixir app
+├── astral                — sites and publishing: pages, Markdown, content, images, feeds, islands
 ├── volt                  — asset pipeline, dev server, HMR, production builds
 │   ├── oxc               — JS/TS compilation and linting
 │   ├── vize              — Vue SFCs and CSS tooling
